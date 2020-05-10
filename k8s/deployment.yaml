@@ -15,7 +15,7 @@ spec:
         app: vote-api
     spec:
       containers:
-        - image: quay.io/openshift-pipeline/vote-api:latest
+        - image: quay.io/deepaked/vote-api:latest
           imagePullPolicy: Always
           name: vote-api
           ports:
