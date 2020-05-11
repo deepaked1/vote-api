@@ -15,7 +15,7 @@ spec:
         app: vote-api
     spec:
       containers:
-        - image: quay.io/deepaked/vote-api:latest
+        - image: quay.io/deepaked/vote-api:v0.0.1
           imagePullPolicy: Always
           name: vote-api
           ports:
