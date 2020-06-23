@@ -6,7 +6,8 @@ pipeline{
 
   }
   stages{
-    stage('docker-version') {
+    stage('Hello') {
+	sh 'Hello'
     }
   }
 }
