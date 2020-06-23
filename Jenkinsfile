@@ -1,13 +1,18 @@
-pipeline{
-    environment {
-        DOCKER_HOME = tool 'Docker'
+pipeline {
+    agent {
+        label '!Linux'
     }
-	stages{
- 		stage('Prep'){
-  			agent {
-    				docker {
-      					image 'docker:latest'									}
-			}
- 		}
-	}
+
+    environment {
+        DOCKER_HOME = tool 'DOCKER'
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo "DOCKER_HOME  is ${DOCKER_HOME}"
+                sh 'printenv'
+            }
+        }
+    }
 }
