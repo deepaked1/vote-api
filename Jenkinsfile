@@ -5,6 +5,7 @@ pipeline {
 
     environment {
         DOCKER_HOME = tool 'Docker'
+        PATH = $PATH:$DOCKER_HOME/bin
     }
 
     stages {
