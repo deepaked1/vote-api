@@ -12,7 +12,11 @@ pipeline {
         stage('Prep') {
             steps {
                 sh 'export PATH=${PATH}:${DOCKER_HOME}/bin'
-		echo "${PATH}"
+            }
+        }
+        stage('Echo') {
+            steps {
+		echo "PATH is ${PATH}"
             }
         }
         stage('Build') {
