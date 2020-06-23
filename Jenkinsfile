@@ -8,8 +8,8 @@ pipeline {
   stages {
     stage('docker-version') {
       steps {
-        sh 'docker version'
         tool 'Docker'
+        sh 'docker version'
       }
     }
   }
