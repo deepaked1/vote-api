@@ -1,6 +1,7 @@
 pipeline{
-agent any
-def dockerHome
+	node{
+		def dockerHome
+	}
 	stages{
  		stage('Prep'){
   			agent {
