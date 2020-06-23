@@ -4,7 +4,7 @@ pipeline {
     }
 
     environment {
-        DOCKER_HOME = tool 'DOCKER'
+        DOCKER_HOME = tool 'Docker'
     }
 
     stages {
