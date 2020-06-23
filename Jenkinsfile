@@ -1,7 +1,7 @@
 pipeline{
-	node{
-		def dockerHome
-	}
+    environment {
+        DOCKER_HOME = tool 'Docker'
+    }
 	stages{
  		stage('Prep'){
   			agent {
