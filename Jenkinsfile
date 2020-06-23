@@ -5,11 +5,16 @@ pipeline {
 
     environment {
         DOCKER_HOME = tool 'Docker'
-        PATH = '${PATH}:{$DOCKER_HOME}/bin'
     }
 
     stages {
 
+        stage('Prep') {
+            steps {
+                sh 'export PATH=${PATH}:${DOCKER_HOME}/bin'
+		echo "${PATH}"
+            }
+        }
         stage('Build') {
 		agent {
 		       	docker { image 'docker' }
