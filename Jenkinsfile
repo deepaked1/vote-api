@@ -1,15 +1,12 @@
 pipeline{
-  agent {
-    docker {
-      image 'docker:latest'
-    }
-
-  }
-  stages{
-    stage('Hello') {
-      steps{
-	sh 'Hello'
-      }
-    }
-  }
+agent any
+def dockerHome
+	stages{
+ 		stage('Prep'){
+  			agent {
+    				docker {
+      					image 'docker:latest'									}
+			}
+ 		}
+	}
 }
